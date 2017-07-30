@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions(
 features={"src/test/resources/features"},
 glue={"scenariosteps","org.teracy.scats.core.steps"},
-tags = {"@test"},
+//tags = {"@test"},
 plugin={"junit:target/testrunner/cucumber.xml"
 		,"html:target/testrunner"
 		,"json:target/testrunner/cucumber.json"}

@@ -1,17 +1,17 @@
-@test
 Feature: teracyautotestdemo
+         This is a demo test on PC
 Background:
 	#textbox
-	When navigate to "demo.registurl" 
-	When move backward one page
+	Given navigate to "demo.registurl" 
+	And move backward one page
 	When move forward one page
 	When reload the page
 	
 Scenario: scenario1
 	#textbox
-	When fill value "{!auto,s46}" to the field "demo.firstname"
-	When fill value "{!auto,S10,!test}" to the field "demo.firstname" and store value into variable "varfirstname"
-	When fill value "{!auto,N46}" to the field "demo.lastname"
+	Then fill value "{!auto,s46}" to the field "demo.firstname"
+	And fill value "{!auto,S10,!test}" to the field "demo.firstname" and store value into variable "varfirstname"
+	But fill value "{!auto,N46}" to the field "demo.lastname"
 	When fill value "{!auto,n10,!test}" to the field "demo.lastname" and store value into variable "varfirstname"
 	When fill value "password" to the field "demo.password"
 	When fill value "password" to the field "demo.confirmpassword" and store value into variable "varfirstname"
@@ -37,4 +37,4 @@ Scenario: scenario1
 	When upload on the "demo.file" file "/src/test/resources/DataTest/jpg.jpg"
 	
 	#button
-	When click on the "demo.submit"
+	Then click on the "demo.submit"
